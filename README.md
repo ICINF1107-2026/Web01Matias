@@ -1,4 +1,4 @@
-Portafolio Profesional - Matias Nail
+# Portafolio Profesional - Matias Nail
 
 *en este repositorio se encuentra el código fuente y toda la estructura de mi Portafolio Web Profesional, el cual fué desarrollado como parte de la evaluación 2 del ramo "Desarrollo de Frontend"
 
@@ -42,14 +42,14 @@ Portafolio Profesional - Matias Nail
 -Accesibilidad e Inclusividad
 
 *Navegacion por teclado: Se incluyó un enlace para saltar directamente al contenido principal ('skip-link')
-*HTML Semántico: uso de tarjetas semánticas para cada sección perteneciente (<header>, <nav>, <main>, <section>, <article> y <footer>)
+*HTML Semántico: uso de tarjetas semánticas para cada sección perteneciente ('header', 'nav', 'main', 'section', 'article' y 'footer')
 *Atributos Aria: declaracion de aria-label en navegación y secciones para mejorar la compatibilidad con tecnologías de asistencia
-*Contraste y Legibilidad: elección de paleta de colores sobre umn fondo oscuro, asegurando un contraste suficiente y focos de ateción resaltados con tono turquesa
+*Contraste y Legibilidad: elección de paleta de colores sobre umn fondo oscuro, asegurando un contraste suficiente y focos de ateción resaltados con tono turquesa.
 
 
 # Tecnologías utilizadas
 
--HTML5: Estructuración semántica de la página
+-HTML5: Estructuración semántica de la página web
 -CSS3: estilización de la página
 -Git y GitHub: Control de versiones
 -Vercel y GitHub Pages: para el despliegue de proyectos 
