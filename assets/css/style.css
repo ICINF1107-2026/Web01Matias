@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 24px;
 }
 
 * {
@@ -19,6 +20,10 @@ body {
     flex-direction: column;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+a {
+    color: inherit;
 }
 
 .skip-link {
@@ -43,98 +48,6 @@ body {
 .content,
 .site-footer {
     width: 100%;
-}
-
-.section {
-    margin-bottom: 80px;
-    scroll-margin-top: 90px;
-}
-
-.section-title-desktop,
-.mobile-section-title {
-    display: block;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #f8fafc;
-    margin-bottom: 24px;
-    font-weight: 700;
-}
-
-@media (max-width: 639px) {
-    body {
-        padding: 0 20px;
-    }
-
-    .name a {
-        font-size: 2.2rem;
-        line-height: 1.05;
-    }
-
-    .role {
-        font-size: 1rem;
-        line-height: 1.4;
-    }
-
-    .tagline {
-        font-size: 0.96rem;
-        line-height: 1.5;
-    }
-
-    .nav-menu {
-        margin-top: 24px;
-    }
-
-    .section {
-        margin-bottom: 48px;
-    }
-}
-
-@media (min-width: 640px) {
-    .project-card {
-        padding: 24px;
-    }
-}
-
-@media (min-width: 768px) {
-    .contact-btn {
-        padding: 12px 24px;
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        display: grid;
-        grid-template-columns: minmax(280px, 38%) minmax(0, 1fr);
-        gap: 64px;
-        align-items: start;
-        padding: 0 48px;
-    }
-
-    .sidebar {
-        position: sticky;
-        top: 24px;
-        height: calc(100vh - 48px);
-        padding: 80px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        z-index: 10;
-        align-self: start;
-    }
-
-    .content {
-        padding: 80px 0;
-        min-width: 0;
-    }
-
-    .site-footer {
-        grid-column: 1 / -1;
-    }
-
-    .mobile-section-title {
-        display: none;
-    }
 }
 
 .name a {
@@ -209,6 +122,7 @@ body {
 
 .section {
     margin-bottom: 80px;
+    scroll-margin-top: 90px;
 }
 
 .section p {
@@ -222,6 +136,7 @@ body {
 
 .section-title-desktop,
 .mobile-section-title {
+    display: block;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -292,8 +207,10 @@ body {
     transition: all 0.2s ease;
 }
 
-.contact-btn:hover {
+.contact-btn:hover,
+.contact-btn:focus-visible {
     background-color: rgba(94, 234, 212, 0.1);
+    box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.12);
 }
 
 .site-footer {
@@ -325,4 +242,125 @@ body {
 
 .footer-content a:hover {
     color: #5eead4;
+}
+
+.social-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.github-link,
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 0;
+}
+
+.github-link:hover,
+.github-link:focus-visible,
+.instagram-link:hover,
+.instagram-link:focus-visible {
+    color: #5eead4;
+    transform: translateY(-1px);
+}
+
+.github-link svg,
+.instagram-link svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 639px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .name a {
+        font-size: 2.2rem;
+        line-height: 1.05;
+    }
+
+    .role {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .tagline {
+        font-size: 0.96rem;
+        line-height: 1.5;
+    }
+
+    .nav-menu {
+        margin-top: 24px;
+    }
+
+    .section {
+        margin-bottom: 48px;
+    }
+}
+
+@media (min-width: 640px) {
+    .project-card {
+        padding: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-btn {
+        padding: 12px 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: minmax(260px, 34%) minmax(0, 1fr);
+        gap: 56px;
+        align-items: start;
+        padding: 0 48px;
+        max-width: 1280px;
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 24px;
+        height: calc(100vh - 48px);
+        padding: 80px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 10;
+        align-self: start;
+    }
+
+    .content {
+        padding: 80px 0 40px 0;
+        min-width: 0;
+    }
+
+    .site-footer {
+        grid-column: 1 / -1;
+    }
+
+    .mobile-section-title {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
 }
